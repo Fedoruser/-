@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+// function Student(firstName, lastName, group) {
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+//   this.group = group;
+//   this.grades = []; 
+//   this.addGrade = function(grade) {
+//     this.grades.push(grade);
+//   };
+
+//   this.printInfo = function() {
+//     console.log(`Студент: ${this.firstName} ${this.lastName}`);
+//     console.log(`Группа: ${this.group}`);
+//     console.log(`Оценки: ${this.grades.join(', ')}`);
+//   };
+// }
+
+// const student1 = new Student("Иван", "Иванов", "ИТ-101");
+
+// student1.addGrade(5);
+// student1.addGrade(4);
+// student1.addGrade(3);
+
+// student1.printInfo();
+
+
+function User(name) {
+  this.name = name;
+  this.isAdmin = false;
+}
+
+let user = new User("Вася");
+
+alert(user.name); // Вася
+alert(user.isAdmin); // false
+
+
+    </script>
+</body>
+</html>

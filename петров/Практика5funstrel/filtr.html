@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Почты</h1>
+
+    <input type="text" name="" id="filter">
+
+    <ul id="maillist" >
+        <li id="hs"></li>
+    </ul>
+
+    <script>
+        const mail=["fedor.mail","ivan.mail","ivan.maill"];
+
+        const filterinput= document.getElementById("filter");
+
+        const res= document.getElementById("maillsit");
+
+        const listt= document.getElementById("hs");
+
+
+        function updatemail(){
+            mail.forEach(mail => {
+                if (mail===filterinput.value){
+                    listt.textContent=mail;
+                }
+            });
+        }
+
+        filterinput.addEventListener("input", updatemail);
+
+    </script>
+
+</body>
+</html>

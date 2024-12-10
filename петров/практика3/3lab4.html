@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document4</title>
+</head>
+<body>
+    
+
+   <script>
+
+     
+      var countred = 0;
+      var num;
+      var countblack = 0;
+      var countwhite = 0;
+      function  trans(){
+        for (let i=0; i<3;i++) {
+              num = Math.floor(Math.random () *3);
+          if (num===0) {
+
+
+            countred=countred+1;
+          } else {
+            if (num === 1) {
+                countblack = countblack + 1;
+            } else {
+                countwhite = countwhite + 1;
+            }
+          }
+      }
+      
+       
+     
+    }
+    for (let j=0 ;j<1000000;j++){
+
+
+
+        trans();
+
+    }
+
+console.log(countred);
+
+
+    </script>
+
+</body>
+</html> 

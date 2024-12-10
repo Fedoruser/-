@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+const array = [];
+
+for (let i=0; i <10;i++){
+    const random= Math.floor(Math.random () *41)-10;
+    array.push(random);
+        console.log(array[i]);
+}
+console.log(array);
+for (let i=0; i <10;i++){
+    if (array[i]<0){
+        array[i]= array[i]*array[i];
+}}
+console.log(array);
+</script>
+
+</body>
+</html>

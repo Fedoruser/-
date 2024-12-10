@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+   <script>
+
+      const  array = [];
+      let summ=0;
+      let summnega=0;
+      let countnega=0;
+      let countposi=0;
+      let srednega;
+      let sredposi;
+        for (let i=0; i<10;i++) {
+            const   num = Math.floor(Math.random () * 41)-15;
+           array.push(num);
+
+           if (array[i]>0) {
+            summ= summ+array[i];
+            countposi+=1;
+           }
+            if (array[i]<0) {
+                summnega= summnega+array[i];
+            countnega+=1;
+
+           }
+        
+            }
+     
+                
+   
+
+       
+       
+        
+        console.log(array);
+
+        srednega = summnega/countnega;
+
+        sredposi = summ/countposi;
+
+        
+        console.log(srednega);
+        console.log(sredposi);
+
+
+    </script>
+
+</body>
+</html> 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+function Group(names) {
+  this.names = names;
+
+  this.printNames = function() {
+    console.log("Имена группы:");
+    for (const name of this.names) {
+      console.log(name);
+    }
+  };
+}
+
+const myGroup = new Group(["Иван", "Петр", "Мария", "Ольга"]);
+
+myGroup.printNames();
+    </script>
+
+</body>
+</html>

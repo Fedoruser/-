@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <button class="question">загадки</button>
+
+    <script>
+
+        const start =document.querySelector(".question");
+
+
+        start.onclick = function() {
+            let otv1= "елка";
+            let otv2= "машина";
+            let count;
+
+            let answer = prompt('Введите ответ');
+
+            if (answer===otv1) {
+                alert('Верно количество верных отгадок:1',);
+
+            }
+            else
+            alert('неверно')
+
+            let answer2 = prompt('Введите ответ');
+
+                if (answer2===otv2){
+                
+
+                    alert('Верно количество верных отгадок:2')
+
+                }
+                else
+            alert('неверно')
+
+            // alert("ghb");
+        }
+    </script>
+
+</body>
+</html>

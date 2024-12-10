@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    const origarr= [10,20,30];
+    
+
+    const newarr=origarr.map(element =>(element+10)*3);
+    
+
+   
+    console.log(newarr);
+    console.log("////////////////////////////////////")
+    const year= [2007,2006,1997]
+    const currentyear=2024;
+
+    const ago= year.map(year => currentyear-year);
+
+    console.log(ago);
+    console.log("////////////////////////////////////")
+
+    const adminpanel =[
+        {name:'Ivan', access:true,},
+
+        {name:'Gleb', access:true,},
+
+        {name:'Ivan', access:false,}
+
+    ];
+
+
+    
+
+    const accessEdit= adminpanel.filter(adminpanel =>adminpanel.access===true);
+    console.log(accessEdit)
+
+    console.log("//////////")
+
+        const mark = [2,3,4,5,5];
+
+        const summa = mark.reduce((accumulator,currentmark) => accumulator+currentmark,0);
+
+        const sred= summa/mark.length;
+
+        console.log(sred);
+
+
+    console.log("////////////////////////////////////")
+
+
+        const lang= ['JavaScript', 'PHP', 'Pascal']
+
+        function edit(lang,funct){
+
+            // const newarr= [];
+
+            // for (let i=0;i<lang.length;i++){
+
+            //     const res= fu(lang[i])
+
+            // }
+
+            // function edit(sim) {
+
+            //     if (sim)
+
+            
+
+
+
+
+
+        }
+
+
+</script>
+</body>
+</html>

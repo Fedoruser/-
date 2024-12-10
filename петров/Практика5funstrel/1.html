@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <script>
+
+
+console.log('/////////////////////////// калькулятор')
+
+
+        let summ= (num1,num2) => num1+num2;
+          
+        
+
+
+    console.log(summ(90,2));
+
+
+    let minus= (num1,num2) =>  num1-num2;
+
+    console.log(minus(9,2));
+
+
+    let multiply= (num1,num2) =>num1*num2;
+        
+
+
+    console.log(multiply(9,2));
+
+
+    let didide= (num1,num2) =>num1/num2;
+             
+            
+        
+
+
+    console.log(didide(9,2));
+
+
+
+
+    console.log('/////////////////////////// сколько вам лет')
+
+
+
+    let age = prompt("Сколько Вам лет?", );
+
+let welcome = (age < 18) ?
+  () => alert('Привет') :
+  () => alert("Здравствуйте!");
+
+welcome(); // теперь всё в порядке
+
+
+
+
+
+console.log('/////////////////////////// Полиндром')
+
+
+        let funcpoli=(str) => {
+
+            let result= str.split('').reverse().join('');
+        
+            if (result === str){
+            console.log("полиндром",str)
+            } else {
+                console.log("Ошибка")
+            }
+            
+        }
+
+        funcpoli('ава');
+        
+
+
+
+console.log('/////////////////////////// сред знач')
+
+
+        const array= [2,2,2,2];
+        let sum=0;
+        let col=0;
+        let funcmas=(array) =>{
+        for(let i=0;i<array.length;i++){
+           sum=sum+array[i];
+            col++;
+
+        }
+        console.log(sum/col)
+    }
+    funcmas([2,200,2,2])
+        
+console.log('/////////////////////////// Новый год ')
+        
+    let funcnewyear=(datacure) =>{
+
+        let data=31;
+
+        let res=31-datacure;
+
+
+        
+        console.log(res,"Дней до нового года");
+
+    }
+     funcnewyear(7);
+
+
+console.log('/////////////////////////// UNderfiend ')
+
+
+    let funcunde=() => {
+        let ds;
+        console.log(ds);
+    }
+
+    (funcunde());
+
+
+
+console.log('/////////////////////////// массив и напишите стрелочные функции для него ')
+
+
+
+  
+    let summa1=0;
+    let chet=0;
+    let funcmass=(mas) =>{
+    for (let i=0;i<mas.length;i++){
+
+        summa1=summa1+mas[i];
+        if (mas[i]%2===0){
+            chet++;
+        }
+
+
+    }
+    const newarrrr=mas.map(x=>x*2)
+
+    console.log("суммирование всех элементов",summa1);
+    console.log("кол-чет",chet);
+    console.log("x2 ",newarrrr);
+
+
+
+        }
+        funcmass([1,2,3,40])
+
+        
+        
+
+
+        
+        
+
+        
+        
+
+
+
+
+     
+
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+
+  <button id="past">past</button>
+
+    <button id="prov">Проверка</button>
+
+    <button id="Z">zas</button>
+
+
+    <script>
+
+
+const past= document.getElementById('past');
+
+const zas= document.getElementById('z');
+
+const prov= document.getElementById('prov');
+
+
+        const custumerbank= {
+
+            name:"Alex",
+            lastName:"ivanv",
+            age:23,
+            
+        }
+
+
+
+        const workerclinick= {
+
+name:"Anna",
+lastName:"KOSHKINa",
+age:29,
+
+}
+
+
+const citizen= {
+
+name:"Vladimir",
+lastName:"SOVAKIN",
+age:45,
+
+}
+
+
+function dicp(){
+  
+
+for (const property in citizen) {
+  console.log(`${property}: ${citizen[property]}`);
+}
+console.log("//////////")
+
+for (const property in workerclinick) {
+  console.log(`${property}: ${workerclinick[property]}`);
+}
+console.log("//////////")
+
+for (const property in custumerbank) {
+  console.log(`${property}: ${custumerbank[property]}`);
+}
+
+
+}
+
+past.addEventListener('click',dicp);
+
+
+
+
+
+  function avs()  {
+
+  let num= prompt('Загадайте цифру от 0 до 9');
+
+  num= parseInt(num);
+
+  switch(num){
+      case 1:alert(`Вы загадали ${num}`);
+
+      case 2:alert(`Вы загадали ${num}`);
+
+      case 3:alert(`Вы загадали ${num}`);
+
+      case 4:alert(`Вы загадали ${num}`);
+
+      case 5:alert(`Вы загадали ${num}`);
+
+      case 6:alert(`Вы загадали ${num}`);
+
+      case 7:alert(`Вы загадали ${num}`);
+
+      case 8:alert(`Вы загадали ${num}`);
+
+      case 9:alert(`Вы загадали ${num}`);
+
+
+      
+
+  }
+  }
+
+
+  zas.addEventListener('click',avs);
+
+
+
+  function pasrr(){
+      let min = parseInt(prompt("Введите число минут (от 0 до 59):"));
+
+  if (isNaN(min) || min < 0 || min > 59) {
+    alert("Некорректный ввод!");
+  } else {
+    let quarter;
+    switch (true) {
+      case min >= 0 && min <= 14:
+        quarter = "Первая четверть часа";
+        break;
+      case min >= 15 && min <= 29:
+        quarter = "Вторая четверть часа";
+        break;
+      case min >= 30 && min <= 44:
+        quarter = "Третья четверть часа";
+        break;
+      case min >= 45 && min <= 59:
+        quarter = "Четвертая четверть часа";
+        break;
+      default:
+        quarter = "Ошибка"; 
+    }
+    alert(`Минуты ${min} попадают в ${quarter}`);
+  }
+  }
+
+
+
+
+
+       function prov(str,phmum){
+
+          let first= parseInt(str[0]);
+
+           if (first >= 1 && firstDigit <= 3) {
+       if (str.includes(phmum)) {
+           return "Первая цифра 1, 2 или 3, и номер телефона присутствует";
+       } else {
+          return "Первая цифра 1, 2 или 3";
+       }
+    } else {
+      return "нет";
+     }
+
+      }
+
+
+   prov.addEventListener('click',prov);
+
+
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <button id="past">past</button>
+  <button id="prov">Проверка строки</button>
+  <button id="Z">zas</button>
+
+  <div>
+    <label for="strInput">Введите строку:</label>
+    <input type="text" id="strInput">
+    <label for="phoneInput">Введите номер телефона:</label>
+    <input type="text" id="phoneInput">
+    <div id="provOutput"></div>
+  </div>
+
+  <script>
+    const past = document.getElementById('past');
+    const zas = document.getElementById('Z');
+    const provButton = document.getElementById('prov');
+    const strInput = document.getElementById('strInput');
+    const phoneInput = document.getElementById('phoneInput');
+    const provOutput = document.getElementById('provOutput');
+
+
+    const custumerbank = {
+        name: "Alex",
+        lastName: "ivanv",
+        age: 23,
+    };
+
+    const workerclinick = {
+        name: "Anna",
+        lastName: "KOSHKINa",
+        age: 29,
+    };
+
+    const citizen = {
+        name: "Vladimir",
+        lastName: "SOVAKIN",
+        age: 45,
+    };
+
+    function dicp() {
+      for (const property in citizen) {
+        console.log(`${property}: ${citizen[property]}`);
+      }
+      console.log("//////////");
+      for (const property in workerclinick) {
+        console.log(`${property}: ${workerclinick[property]}`);
+      }
+      console.log("//////////");
+      for (const property in custumerbank) {
+        console.log(`${property}: ${custumerbank[property]}`);
+      }
+    }
+
+    past.addEventListener('click', dicp);
+
+    function avs() {
+      let num = parseInt(prompt('Загадайте цифру от 0 до 9'));
+      switch (num) {
+          case 1: alert(`Вы загадали ${num}`); break;
+          case 2: alert(`Вы загадали ${num}`); break;
+          case 3: alert(`Вы загадали ${num}`); break;
+          case 4: alert(`Вы загадали ${num}`); break;
+          case 5: alert(`Вы загадали ${num}`); break;
+          case 6: alert(`Вы загадали ${num}`); break;
+          case 7: alert(`Вы загадали ${num}`); break;
+          case 8: alert(`Вы загадали ${num}`); break;
+          case 9: alert(`Вы загадали ${num}`); break;
+          default: alert("Число вне диапазона 0-9");
+      }
+    }
+
+    zas.addEventListener('click', avs);
+
+    function pasrr() {
+        let min = parseInt(prompt("Введите число минут (от 0 до 59):"));
+        if (isNaN(min) || min < 0 || min > 59) {
+          alert("Некорректный ввод!");
+        } else {
+          let quarter;
+          switch (true) {
+            case min >= 0 && min <= 14:
+              quarter = "Первая четверть часа";
+              break;
+            case min >= 15 && min <= 29:
+              quarter = "Вторая четверть часа";
+              break;
+            case min >= 30 && min <= 44:
+              quarter = "Третья четверть часа";
+              break;
+            case min >= 45 && min <= 59:
+              quarter = "Четвертая четверть часа";
+              break;
+            default:
+              quarter = "Ошибка";
+          }
+          alert(`Минуты ${min} попадают в ${quarter}`);
+        }
+    }
+
+    past.addEventListener('click',pasrr)
+
+    provButton.addEventListener('click', () => {
+        const str = strInput.value;
+        const phmum = phoneInput.value;
+        provOutput.textContent = prov(str, phmum);
+    });
+
+
+    function prov(str, phmum) {
+        if (str.length === 0) return "Строка пуста";
+        let first = parseInt(str[0]);
+        if (isNaN(first)) return "Первый символ не число";
+
+        if (first >= 1 && first <= 3) {
+            if (str.includes(phmum)) {
+                return "Первая цифра 1, 2 или 3, и номер телефона присутствует";
+            } else {
+                return "Первая цифра 1, 2 или 3";
+            }
+        } else {
+            return "Первая цифра не 1, 2 или 3";
+        }
+    }
+  </script>
+
+</body>
+</html>

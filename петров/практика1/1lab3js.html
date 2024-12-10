@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Угадай число</title>
+</head>
+<body>
+  <button onclick="угадайЧисло()">Угадай число</button>
+
+  <script>
+  
+let result = prompt("Введите результат умножения задуманного числа на 2, плюс 7:");
+
+result = parseInt(result);
+
+let guessedNumber = (result - 7) / 2;
+
+alert("Вы задумали число: " + guessedNumber);
+  </script>
+</body>
+</html>

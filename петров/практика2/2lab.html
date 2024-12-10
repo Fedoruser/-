@@ -1,0 +1,142 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="countButton">1-10</button> 
+    <button id="moreone">Еще по одной?</button> 
+    <button id="primesButton">Простые числа</button>
+    <button id="questionButton">Начать отгадки</button> <div id="output"></div>
+    <div>
+        <h2>Факториал</h2>
+        <label for="journalNumber">Порядковый номер в журнале:</label>
+        <input type="number" id="journalNumber" min="0">
+        <button id="factorialButton">Вычислить факториал</button>
+        <p id="factorialResult"></p>
+      </div>
+    
+      <div>
+        <h2>Проверка на палиндром</h2>
+        <label for="lastName">Ваша фамилия:</label>
+        <input type="text" id="lastName">
+        <button id="palindromeButton">Проверить</button>
+        <p id="palindromeResult"></p>
+      </div>
+    <script>
+        const countButton = document.getElementById('countButton');
+        countButton.addEventListener('click', count);
+
+        function count() {
+            let outputString = "";
+            for (let n = 1; n <= 10; n++) {
+                outputString += n + "<br>";
+            }
+            document.getElementById('output').innerHTML = outputString;
+        }
+
+        const moreone = document.getElementById('moreone');
+        moreone.addEventListener('click', more);
+
+        function more() {
+            let response;
+            do {
+                response = prompt('Введите 1 чтобы выйти');
+                if (response !== '1') {
+                  document.getElementById('output').innerHTML += 'Еще по одной!<br>';
+                }
+            } while (response !== '1'); 
+
+            document.getElementById('output').innerHTML += 'Бывай!<br>';
+        }
+
+        const questionButton = document.getElementById('questionButton');
+
+        const onezagad="машина";
+        const secondzagad="елка";
+
+
+        function question(){
+            let wordpolz= prompt("введеите слово")
+            if(wordpolz===onezagad){
+                alert("best")
+            } else alert("мимо");
+            let wordpolz2= prompt("введеите слово")
+            
+            if(wordpolz2===secondzagad){
+                alert("best")
+            } else alert("мимо");
+        }
+
+        questionButton.addEventListener('click', question);
+
+
+        const primesButton = document.getElementById('primesButton');
+        primesButton.addEventListener('click', findPrimes);
+
+        function findPrimes() {
+            let journalNumber = parseInt(prompt("Введите ваш порядковый номер в журнале:"));
+            if (isNaN(journalNumber) || journalNumber <= 1) {
+                alert("Пожалуйста, введите целое число больше 1.");
+                return;
+            }
+
+            let primes = [];
+            for (let i = 2; i <= journalNumber; i++) {
+                if (isPrime(i)) {
+                    primes.push(i);
+                }
+            }
+            document.getElementById('output').innerHTML = "Простые числа от 1 до " + journalNumber + ": " + primes.join(", ") + "<br>";
+        }
+
+        function isPrime(num) {
+            if (num <= 1) return false;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+
+
+        const factorialButton = document.getElementById('factorialButton');
+    const factorialResult = document.getElementById('factorialResult');
+    const journalNumberInput = document.getElementById('journalNumber');
+
+    factorialButton.addEventListener('click', () => {
+      const num = parseInt(journalNumberInput.value);
+      if (isNaN(num) || num < 0) {
+        factorialResult.textContent = "Пожалуйста, введите неотрицательное целое число.";
+        return;
+      }
+      factorialResult.textContent = "Факториал: " + factorial(num);
+    });
+
+    function factorial(n) {
+      if (n === 0) return 1;
+      let result = 1;
+      for (let i = 2; i <= n; i++) {
+        result *= i;
+      }
+      return result;
+    }
+
+    const palindromeButton = document.getElementById('palindromeButton');
+    const palindromeResult = document.getElementById('palindromeResult');
+    const lastNameInput = document.getElementById('lastName');
+
+    palindromeButton.addEventListener('click', () => {
+      const lastName = lastNameInput.value.toLowerCase().replace(/[^a-zа-я]/g, ''); //Clean input
+      palindromeResult.textContent = isPalindrome(lastName) ? "Это палиндром!" : "Это не палиндром.";
+    });
+
+    function isPalindrome(str) {
+      return str === str.split('').reverse().join('');
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        class User{
+
+            constructor(name){
+                this.name=name
+            }
+
+            myname(){
+
+                console.log("Привет меня зовут"+"  "+ this.name)
+            }
+
+            reverse(){
+                let rev;
+                rev=this.name;
+                rev=rev.split('').reverse().join('');
+                console.log(rev);
+
+            }
+        }
+
+        let userr= new User("вова");
+
+        let usera= new User("федя");
+
+
+        usera.reverse();
+
+
+
+        // class Reverse{
+        //     constructor(namemy){
+
+        //         this.name=namey
+        //     }
+        // }
+
+
+    </script>
+
+</body>
+</html>
